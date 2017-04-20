@@ -1,0 +1,26 @@
+{
+  "name": "perstat-data",
+  "description": "An AngularJS module that contains the services to interact with PERSTAT data",
+  "main": [
+    "dist/perstat-data.js"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "authors": [
+    "Ryan McLean"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/mcleanra/perstat-data",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-sp-digest": "^1.0.0",
+    "angular-sp-list": "^1.0.0"
+  }
+}

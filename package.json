@@ -1,0 +1,31 @@
+{
+  "name": "perstat-data",
+  "version": "1.0.0",
+  "description": "An AngularJS module that contains the services to interact with PERSTAT data",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcleanra/perstat-data.git"
+  },
+  "author": "Ryan McLean",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mcleanra/perstat-data/issues"
+  },
+  "homepage": "https://github.com/mcleanra/perstat-data#readme",
+  "devDependencies": {
+    "gulp": "~3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^2.1.2"
+  },
+  "unpkg": "dist/perstat-data.min.js",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "angular-sp-digest": "^1.0.0",
+    "angular-sp-list": "^1.0.0"
+  }
+}
