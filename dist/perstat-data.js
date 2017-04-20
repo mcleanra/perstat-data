@@ -27,138 +27,6 @@
 
 (function (angular) {
 
-	'use strict';
-
-	angular.module('oaa.data').factory("countryService", ['Country', 'spListService', function (Country, spListService) {
-
-		var svc = new spListService(Country);
-
-		return svc;
-
-	}]);
-
-})(angular);
-(function (angular) {
-
-	'use strict';
-
-	angular.module('perstat.data')
-		.factory("directorateDivisionService", ['DirectorateDivision', 'spListService',
-			function (DirectorateDivision, spListService) {
-
-				var svc = new spListService(DirectorateDivision);
-
-				return svc;
-
-			}]);
-			
-})(angular);
-(function (angular) {
-
-	'use strict';
-
-	angular.module('perstat.data')
-		.factory("personnelCoreService", ['PersonnelCore', 'spListService',
-			function (PersonnelCore, spListService) {
-
-				var svc = new spListService(PersonnelCore);
-
-				return svc;
-
-			}]);
-			
-})(angular);
-(function (angular) {
-
-	'use strict';
-
-	angular.module('perstat.data')
-		.factory("perstatService", ['PERSTAT', 'spListService',
-			function (PERSTAT, spListService) {
-
-				var svc = new spListService(PERSTAT);
-
-				return svc;
-
-			}]);
-			
-})(angular);
-(function (angular) {
-
-	'use strict';
-
-	angular.module('perstat.data')
-		.factory("perstatVerificationsService", ['PERSTATVerification', 'spListService',
-			function (PERSTATVerification, spListService) {
-
-				var svc = new spListService(PERSTATVerification);
-
-				return svc;
-
-			}]);
-			
-})(angular);
-(function (angular) {
-
-	'use strict';
-
-	angular.module('perstat.data')
-		.factory("serviceGradeRankService", ['ServiceGradeRank', 'spListService',
-			function (ServiceGradeRank, spListService) {
-
-				var svc = new spListService(ServiceGradeRank);
-
-				return svc;
-
-			}]);
-			
-})(angular);
-(function (angular) {
-
-    'use strict';
-
-    angular.module('oaa.data')
-        .factory('Country', ['spListItem', function (spListItem) {
-
-            var _siteUrl = _spPageContextInfo.siteAbsoluteUrl;
-            var _listName = "Tbl_Countries";
-            var _viewFields =
-                "<ViewFields>\
-                    <FieldRef Name='ID' />\
-                    <FieldRef Name='Title' />\
-                    <FieldRef Name='Capital' />\
-                    <FieldRef Name='lat' />\
-                    <FieldRef Name='long' />\
-                    <FieldRef Name='CI_x0020_Threat_x0020_Level' />\
-                </ViewFields>";
-
-            var _spServicesJsonMapping = {
-                ows_ID: { mappedName: "Id", objectType: "Number" },
-                ows_Title: { mappedName: "Title", objectType: "Text" },
-                ows_Capital: {mappedName: "Capital", objectType: "Text"},
-                ows_lat: {mappedName: "lat", objectType: "Number"},
-                ows_long: {mappedName: "long", objectType: "Number"},
-                ows_CI_x0020_Threat_x0020_Level: { mappedName: "CI_x0020_Threat_x0020_Level", objectType: "Choice"}
-            };
-
-            var Country = function (item) {
-                this.Id = item.Id;
-                this.Title = item.Title;
-                this.Capital = item.Capital;
-                this.lat = item.lat;
-                this.long = item.long;
-                this.CI_x0020_Threat_x0020_Level = item.CI_x0020_Threat_x0020_Level;
-            };
-
-            Country.prototype = new spListItem(_siteUrl, _listName, _viewFields, _spServicesJsonMapping);
-
-            return Country;
-
-        }]);
-
-})(angular);
-(function (angular) {
-
     'use strict';
 
     angular.module('perstat.data')
@@ -408,5 +276,137 @@
             return ServiceGradeRank;
 
         }]);
+
+})(angular);
+(function (angular) {
+
+    'use strict';
+
+    angular.module('oaa.data')
+        .factory('TblCountry', ['spListItem', function (spListItem) {
+
+            var _siteUrl = _spPageContextInfo.siteAbsoluteUrl;
+            var _listName = "Tbl_Countries";
+            var _viewFields =
+                "<ViewFields>\
+                    <FieldRef Name='ID' />\
+                    <FieldRef Name='Title' />\
+                    <FieldRef Name='Capital' />\
+                    <FieldRef Name='lat' />\
+                    <FieldRef Name='long' />\
+                    <FieldRef Name='CI_x0020_Threat_x0020_Level' />\
+                </ViewFields>";
+
+            var _spServicesJsonMapping = {
+                ows_ID: { mappedName: "Id", objectType: "Number" },
+                ows_Title: { mappedName: "Title", objectType: "Text" },
+                ows_Capital: {mappedName: "Capital", objectType: "Text"},
+                ows_lat: {mappedName: "lat", objectType: "Number"},
+                ows_long: {mappedName: "long", objectType: "Number"},
+                ows_CI_x0020_Threat_x0020_Level: { mappedName: "CI_x0020_Threat_x0020_Level", objectType: "Choice"}
+            };
+
+            var TblCountry = function (item) {
+                this.Id = item.Id;
+                this.Title = item.Title;
+                this.Capital = item.Capital;
+                this.lat = item.lat;
+                this.long = item.long;
+                this.CI_x0020_Threat_x0020_Level = item.CI_x0020_Threat_x0020_Level;
+            };
+
+            TblCountry.prototype = new spListItem(_siteUrl, _listName, _viewFields, _spServicesJsonMapping);
+
+            return TblCountry;
+
+        }]);
+
+})(angular);
+(function (angular) {
+
+	'use strict';
+
+	angular.module('perstat.data')
+		.factory("directorateDivisionService", ['DirectorateDivision', 'spListService',
+			function (DirectorateDivision, spListService) {
+
+				var svc = new spListService(DirectorateDivision);
+
+				return svc;
+
+			}]);
+			
+})(angular);
+(function (angular) {
+
+	'use strict';
+
+	angular.module('perstat.data')
+		.factory("personnelCoreService", ['PersonnelCore', 'spListService',
+			function (PersonnelCore, spListService) {
+
+				var svc = new spListService(PersonnelCore);
+
+				return svc;
+
+			}]);
+			
+})(angular);
+(function (angular) {
+
+	'use strict';
+
+	angular.module('perstat.data')
+		.factory("perstatService", ['PERSTAT', 'spListService',
+			function (PERSTAT, spListService) {
+
+				var svc = new spListService(PERSTAT);
+
+				return svc;
+
+			}]);
+			
+})(angular);
+(function (angular) {
+
+	'use strict';
+
+	angular.module('perstat.data')
+		.factory("perstatVerificationsService", ['PERSTATVerification', 'spListService',
+			function (PERSTATVerification, spListService) {
+
+				var svc = new spListService(PERSTATVerification);
+
+				return svc;
+
+			}]);
+			
+})(angular);
+(function (angular) {
+
+	'use strict';
+
+	angular.module('perstat.data')
+		.factory("serviceGradeRankService", ['ServiceGradeRank', 'spListService',
+			function (ServiceGradeRank, spListService) {
+
+				var svc = new spListService(ServiceGradeRank);
+
+				return svc;
+
+			}]);
+			
+})(angular);
+(function (angular) {
+
+	'use strict';
+
+	angular.module('oaa.data').factory("tblCountriesService", ['TblCountry', 'spListService', function (TblCountry, spListService) {
+
+		var svc = new spListService(TblCountry);
+
+		return svc;
+
+	}]);
 
 })(angular);

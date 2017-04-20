@@ -3,7 +3,7 @@
     'use strict';
 
     angular.module('oaa.data')
-        .factory('Country', ['spListItem', function (spListItem) {
+        .factory('TblCountry', ['spListItem', function (spListItem) {
 
             var _siteUrl = _spPageContextInfo.siteAbsoluteUrl;
             var _listName = "Tbl_Countries";
@@ -26,7 +26,7 @@
                 ows_CI_x0020_Threat_x0020_Level: { mappedName: "CI_x0020_Threat_x0020_Level", objectType: "Choice"}
             };
 
-            var Country = function (item) {
+            var TblCountry = function (item) {
                 this.Id = item.Id;
                 this.Title = item.Title;
                 this.Capital = item.Capital;
@@ -35,9 +35,9 @@
                 this.CI_x0020_Threat_x0020_Level = item.CI_x0020_Threat_x0020_Level;
             };
 
-            Country.prototype = new spListItem(_siteUrl, _listName, _viewFields, _spServicesJsonMapping);
+            TblCountry.prototype = new spListItem(_siteUrl, _listName, _viewFields, _spServicesJsonMapping);
 
-            return Country;
+            return TblCountry;
 
         }]);
 
