@@ -5,7 +5,7 @@
     angular.module('oaa.data')
         .factory('TblCountry', ['spListItem', function (spListItem) {
 
-            var _siteUrl = _spPageContextInfo.siteAbsoluteUrl;
+            var _siteUrl = "/apps";
             var _listName = "Tbl_Countries";
             var _viewFields =
                 "<ViewFields>\

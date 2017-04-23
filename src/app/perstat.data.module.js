@@ -10,14 +10,12 @@
     
     window._spFormDigestRefreshInterval = 1440000;
 
-    window._spPageContextInfo = window._spPageContextInfo || {
-      siteAbsoluteUrl: '/apps'
-    };
-
   })
   .run(['RequestDigestIntervalService', function(RequestDigestIntervalService){
+
     //this refreshes the request digest every 24 minutes, allowing us to post info to SharePoint
-    RequestDigestIntervalService.startInterval();
+    RequestDigestIntervalService.startInterval('/apps');
+    
   }]);
 
   app.value('_', window._);

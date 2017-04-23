@@ -5,7 +5,7 @@
     angular.module('perstat.data')
         .factory('PersonnelCore', ['spListItem', function (spListItem) {
 
-            var _siteUrl = _spPageContextInfo.siteAbsoluteUrl;
+            var _siteUrl = "/apps";
             var _listName = "PersonnelCore";
             var _viewFields =
                 "<ViewFields>\

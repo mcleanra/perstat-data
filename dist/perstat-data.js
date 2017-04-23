@@ -10,14 +10,12 @@
     
     window._spFormDigestRefreshInterval = 1440000;
 
-    window._spPageContextInfo = window._spPageContextInfo || {
-      siteAbsoluteUrl: '/apps'
-    };
-
   })
   .run(['RequestDigestIntervalService', function(RequestDigestIntervalService){
+
     //this refreshes the request digest every 24 minutes, allowing us to post info to SharePoint
-    RequestDigestIntervalService.startInterval();
+    RequestDigestIntervalService.startInterval('/apps');
+    
   }]);
 
   app.value('_', window._);
@@ -32,7 +30,7 @@
     angular.module('perstat.data')
         .factory('DirectorateDivision', ['spListItem', function (spListItem) {
 
-            var _siteUrl = _spPageContextInfo.siteAbsoluteUrl;
+            var _siteUrl = "/apps";
             var _listName = "Directorate Division";
             var _viewFields =
                 "<ViewFields>\
@@ -73,7 +71,7 @@
     angular.module('perstat.data')
         .factory('PersonnelCore', ['spListItem', function (spListItem) {
 
-            var _siteUrl = _spPageContextInfo.siteAbsoluteUrl;
+            var _siteUrl = "/apps";
             var _listName = "PersonnelCore";
             var _viewFields =
                 "<ViewFields>\
@@ -138,7 +136,7 @@
     angular.module('perstat.data')
         .factory('PERSTAT', ['spListItem', function (spListItem) {
 
-            var _siteUrl = _spPageContextInfo.siteAbsoluteUrl;
+            var _siteUrl = "/apps";
             var _listName = "PERSTAT";
             var _viewFields =
                 "<ViewFields>\
@@ -206,7 +204,7 @@
     angular.module('perstat.data')
         .factory('PERSTATVerification', ['spListItem', function (spListItem) {
 
-            var _siteUrl = _spPageContextInfo.siteAbsoluteUrl;
+            var _siteUrl = "/apps";
             var _listName = "PERSTATVerifications";
             var _viewFields =
                 "<ViewFields>\
@@ -244,7 +242,7 @@
     angular.module('perstat.data')
         .factory('ServiceGradeRank', ['spListItem', function (spListItem) {
 
-            var _siteUrl = _spPageContextInfo.siteAbsoluteUrl;
+            var _siteUrl = "/apps";
             var _listName = "Service Grade Rank";
             var _viewFields =
                 "<ViewFields>\
@@ -285,7 +283,7 @@
     angular.module('oaa.data')
         .factory('TblCountry', ['spListItem', function (spListItem) {
 
-            var _siteUrl = _spPageContextInfo.siteAbsoluteUrl;
+            var _siteUrl = "/apps";
             var _listName = "Tbl_Countries";
             var _viewFields =
                 "<ViewFields>\

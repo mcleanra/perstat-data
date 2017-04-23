@@ -5,7 +5,7 @@
     angular.module('perstat.data')
         .factory('ServiceGradeRank', ['spListItem', function (spListItem) {
 
-            var _siteUrl = _spPageContextInfo.siteAbsoluteUrl;
+            var _siteUrl = "/apps";
             var _listName = "Service Grade Rank";
             var _viewFields =
                 "<ViewFields>\

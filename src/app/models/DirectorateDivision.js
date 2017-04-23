@@ -5,7 +5,7 @@
     angular.module('perstat.data')
         .factory('DirectorateDivision', ['spListItem', function (spListItem) {
 
-            var _siteUrl = _spPageContextInfo.siteAbsoluteUrl;
+            var _siteUrl = "/apps";
             var _listName = "Directorate Division";
             var _viewFields =
                 "<ViewFields>\
