@@ -1,6 +1,6 @@
 {
   "name": "perstat-data",
-  "version": "2.0.0",
+  "version": "3.0.2",
   "description": "An AngularJS module that contains the services to interact with PERSTAT data",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -25,7 +25,6 @@
     "dist"
   ],
   "dependencies": {
-    "angular-sp-digest": "^1.0.0",
-    "angular-sp-list": "^1.0.0"
+    "angular-sp-list": "^3.0.2"
   }
 }
