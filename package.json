@@ -25,6 +25,7 @@
     "dist"
   ],
   "dependencies": {
-    "angular-sp-list": "^3.0.2"
+    "angular-sp-digest": "^3.0.2",
+    "angular-sp-list": "^3.0.6"
   }
 }
