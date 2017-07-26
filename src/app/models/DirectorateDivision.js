@@ -14,6 +14,7 @@
                     <FieldRef Name='Division' />\
                     <FieldRef Name='Division_x0020_Sequence' />\
                     <FieldRef Name='PerstatVerificationEnabled' />\
+                    <FieldRef Name='DirectorateDivision' />\
                 </ViewFields>";
 
             var _spServicesJsonMapping = {
@@ -22,6 +23,7 @@
                 ows_Division: { mappedName: "Division", objectType: "Text" },
                 ows_Division_x0020_Sequence: { mappedName: "Division_x0020_Sequence", objectType: "Choice" },
                 ows_PerstatVerificationEnabled: { mappedName: "PerstatVerificationEnabled", objectType: "Boolean" },
+                ows_DirectorateDivision: { mappedName: "DirectorateDivision", objectType: "Text" }
             };
 
             var DirectorateDivision = function (item) {
@@ -30,6 +32,7 @@
                 this.Division = item.Division;
                 this.Division_x0020_Sequence = item.Division_x0020_Sequence;
                 this.PerstatVerificationEnabled = item.PerstatVerificationEnabled;
+                this.DirectorateDivision = item.DirectorateDivision;
             };
 
             DirectorateDivision.prototype = new spListItem(_siteUrl, _listName, _viewFields, _spServicesJsonMapping);
