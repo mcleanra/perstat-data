@@ -2,7 +2,7 @@
 
     'use strict';
 
-    angular.module('oaa.data')
+    angular.module('perstat.data')
         .factory('TblCountry', ['spListItem', function (spListItem) {
 
             var _siteUrl = "/apps";
